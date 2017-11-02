@@ -11,8 +11,6 @@ import basicwork as bk
 import wx
 
 
-
-
 ###########################################################################
 ## Class main
 ###########################################################################
@@ -22,7 +20,7 @@ class main(wx.Frame):
         wx.Frame.__init__(self, parent, id=wx.ID_ANY, title=wx.EmptyString, pos=wx.DefaultPosition,
                           size=wx.Size(500, 300), style=wx.DEFAULT_FRAME_STYLE | wx.TAB_TRAVERSAL)
 
-        self.SetSizeHintsSz(wx.DefaultSize, wx.DefaultSize)
+        self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
 
         bSizer1 = wx.BoxSizer(wx.VERTICAL)
 
@@ -73,14 +71,11 @@ class main(wx.Frame):
         event.Skip()
         bk.graph()
 
-
     def enter_student_interface(self, event):
         event.Skip()
 
-
     def enter_teacher_interface(self, event):
         event.Skip()
-
 
     def enter_administrator_interface(self, event):
         event.Skip()
@@ -178,10 +173,7 @@ class teacher(wx.Frame):
     def change_score(self, event):
         event.Skip()
 
-
-
     app = wx.App()
     Main = main(None)
     Main.Show()
     app.MainLoop()
-
